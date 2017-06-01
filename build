@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+cd ~/fsl-release-bsp
+repo sync
+DISTRO=fsl-imx-x11 MACHINE=imx6qsabresd source fsl-setup-release.sh -b build-x11
+bitbake fsl-image-qt5
